@@ -11,15 +11,13 @@ public class Personajes implements Serializable {
     private String nombre;
     private String pais;
     private int edad;
-    private TipoGenero tipoGenero;
-    private ArrayList<String> codigoPelicula;
+    private ArrayList<String> codigoPelicula = new ArrayList<>();
     private String id;
 
-    public Personajes(String nombre, String pais, int edad, TipoGenero tipoGenero, ArrayList<String> codigoPelicula, String id) {
+    public Personajes(String nombre, String pais, int edad, ArrayList<String> codigoPelicula, String id) {
         this.nombre = nombre;
         this.pais = pais;
         this.edad = edad;
-        this.tipoGenero = tipoGenero;
         this.codigoPelicula = codigoPelicula;
         this.id = id;
     }
@@ -48,14 +46,6 @@ public class Personajes implements Serializable {
 
     public void setEdad(int edad) {
         this.edad = edad;
-    }
-
-    public TipoGenero getTipoGenero() {
-        return tipoGenero;
-    }
-
-    public void setTipoGenero(TipoGenero tipoGenero) {
-        this.tipoGenero = tipoGenero;
     }
 
     public ArrayList<String> getCodigoPelicula() {

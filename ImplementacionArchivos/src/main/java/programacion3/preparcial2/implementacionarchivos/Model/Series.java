@@ -1,5 +1,7 @@
 package programacion3.preparcial2.implementacionarchivos.Model;
 
+import programacion3.preparcial2.implementacionarchivos.Model.Enum.TipoGenero;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -11,13 +13,15 @@ public class Series implements Serializable {
     private String titulo;
     private Date fechaInicio;
     private String sinopsis;
+    private TipoGenero tipoGenero;
     private ArrayList<Personajes> personajes;
 
-    public Series(String codigo, String titulo, Date fechaInicio, String sinopsis, ArrayList<Personajes> personajes) {
+    public Series(String codigo, String titulo, Date fechaInicio, String sinopsis, TipoGenero tipoGenero, ArrayList<Personajes> personajes) {
         this.codigo = codigo;
         this.titulo = titulo;
         this.fechaInicio = fechaInicio;
         this.sinopsis = sinopsis;
+        this.tipoGenero = tipoGenero;
         this.personajes = personajes;
     }
 
@@ -61,5 +65,13 @@ public class Series implements Serializable {
 
     public void setPersonajes(ArrayList<Personajes> personajes) {
         this.personajes = personajes;
+    }
+
+    public TipoGenero getTipoGenero() {
+        return tipoGenero;
+    }
+
+    public void setTipoGenero(TipoGenero tipoGenero) {
+        this.tipoGenero = tipoGenero;
     }
 }

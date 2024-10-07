@@ -1,6 +1,7 @@
 package programacion3.preparcial2.implementacionarchivos.Utils;
 
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
@@ -72,5 +73,31 @@ public class ArchivoUtil {
         }
 
         fechaSistema = dia_n+"/"+mes_n+"/"+anio+"/"+hora;
+    }
+
+    public static void guardarArchivo(String rutaArchivo, String contendio, boolean bandera) throws IOException {
+        FileWriter fw = new FileWriter(rutaArchivo, bandera);
+        BufferedWriter br = new BufferedWriter(fw);
+        br.write(contendio);
+        br.close();
+        fw.close();
+
+    }
+
+    public static ArrayList<String> leerArchivos(String rutaArchivo) throws IOException {
+
+        ArrayList<String> leerArchivos = new ArrayList<>();
+
+        FileReader fr = new FileReader(rutaArchivo);
+        BufferedReader br = new BufferedReader(fr);
+        String linea = "";
+
+        while ((linea = br.readLine()) != null){
+            leerArchivos.add(linea);
+        }
+        br.close();
+        fr.close();
+
+        return leerArchivos;
     }
 }
