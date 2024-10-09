@@ -76,25 +76,25 @@ public class PersonajeViewController {
 
     @FXML
     void registrarPersonaje(ActionEvent event) throws PersonajeException {
-        if (validarCampor()){
+        if (validarCampos()){
             personajeController.CrearPersonaje(crearPersonaje());
             personajes.add(crearPersonaje());
-            mostrarAletar("Registro completo","El registro se llevo acabo");
+            mostrarAlerta("Registro completo","El registro se llevo acabo");
             tvTablaPersonajes.refresh();
         }else{
-            mostrarAletar("Error mi perro","Llene datos pendejo");
+            mostrarAlerta("Error mi perro","Llene datos pendejo");
         }
 
     }
 
 
-    private boolean validarCampor(){
+    private boolean validarCampos(){
         return !txfId.getText().isEmpty() && !txtNombre.getText().isEmpty() && !txtEdad.getText().isEmpty()
                 && !txtPais.getText().isEmpty();
     }
 
 
-    private void mostrarAletar(String titulo, String mensaje){
+    private void mostrarAlerta(String titulo, String mensaje){
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(titulo);
         alert.setHeaderText(null);
@@ -105,10 +105,22 @@ public class PersonajeViewController {
     @FXML
     void actualizarPersonaje(ActionEvent event) {
 
+        
+
     }
 
     @FXML
-    void eliminarPersonaje(ActionEvent event) {
+    void eliminarPersonaje(ActionEvent event) throws PersonajeException {
+
+        Personajes personaje = tvTablaPersonajes.getSelectionModel().getSelectedItem();
+        if (personaje != null){
+            personajeController.deletePersonaje(personaje);
+            personajes.remove(personaje);
+            mostrarAlerta("eliminar", "El personaje se eliminado correctamente");
+
+        }else{
+            mostrarAlerta("Error mi perro","Seleccione un personaje");
+        }
 
     }
 

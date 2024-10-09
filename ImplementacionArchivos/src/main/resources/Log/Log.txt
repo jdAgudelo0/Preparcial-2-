@@ -60,3 +60,7 @@ oct 08, 2024 8:06:52 P.M. programacion3.preparcial2.implementacionarchivos.Utils
 INFO: la app se incio inicio de sesion 08/09/2024/8
 oct 08, 2024 8:07:20 P.M. programacion3.preparcial2.implementacionarchivos.Utils.ArchivoUtil guardarRegistroLOG
 INFO: registro se esta agrgando un perosnaje 08/09/2024/8
+oct 08, 2024 8:12:15 P.M. programacion3.preparcial2.implementacionarchivos.Utils.ArchivoUtil guardarRegistroLOG
+INFO: la app se incio inicio de sesion 08/09/2024/8
+oct 08, 2024 8:13:23 P.M. programacion3.preparcial2.implementacionarchivos.Utils.ArchivoUtil guardarRegistroLOG
+INFO: la app se incio inicio de sesion 08/09/2024/8

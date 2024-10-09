@@ -1,6 +1,4 @@
-123 %% juan %% colombia %% 23 %% 
 345 %% alejo %% colombia %% 10 %% 
 987 %% jui %% Pereira %% 123 %% 
 20394 %% pingui %% Mongolia %% 1 %% 
-000 %% 2340 %% makk %% 12 %% 
 1092851747 %% juan agudelo %% Colombia %% 18 %% 
