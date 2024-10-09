@@ -64,8 +64,8 @@ public class ModelFactory {
         }
     }
 
-    public boolean updatePersonaje(Personajes personaje) throws PersonajeException {
-        getNetflix().updatePersonaje(personaje, personaje.getId());
+    public boolean updatePersonaje(Personajes personaje, String id) throws PersonajeException {
+        getNetflix().updatePersonaje(personaje, id);
         salvarDatos();
         guardarLog("se esta actualizando el personaje", 2,"actualizar");
         return true;

@@ -103,9 +103,24 @@ public class PersonajeViewController {
     }
 
     @FXML
-    void actualizarPersonaje(ActionEvent event) {
+    void actualizarPersonaje(ActionEvent event) throws PersonajeException {
 
-        
+        Personajes personajeSeleccionado = tvTablaPersonajes.getSelectionModel().getSelectedItem();
+        Personajes personajeACtualizado = crearPersonaje();
+
+        if(personajeSeleccionado != null){
+            if(validarCampos()){
+                personajeController.ModificarPersonaje(personajeACtualizado, personajeSeleccionado.getId());
+                personajes.set(personajes.indexOf(personajeSeleccionado), personajeACtualizado);
+                mostrarAlerta("actualizar", "se actualizo el personaje");
+                tvTablaPersonajes.refresh();
+            }else{
+                mostrarAlerta("Error mi perro","datos no validos");
+            }
+        }else{
+            mostrarAlerta("Error mi perro","Llene datos pendejo");
+        }
+
 
     }
 

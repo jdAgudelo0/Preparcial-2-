@@ -32,9 +32,9 @@ public class PersonajeController {
         }
     }
 
-    public int ModificarPersonaje(Personajes personaje) throws PersonajeException {
+    public int ModificarPersonaje(Personajes personaje, String idPersonajeAnterior) throws PersonajeException {
 
-        if(modelFactory.updatePersonaje(personaje)){
+        if(modelFactory.updatePersonaje(personaje, idPersonajeAnterior)){
             return 1;
         } else{
             return 0;
