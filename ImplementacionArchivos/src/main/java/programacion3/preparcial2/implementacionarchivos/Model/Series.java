@@ -3,6 +3,7 @@ package programacion3.preparcial2.implementacionarchivos.Model;
 import programacion3.preparcial2.implementacionarchivos.Model.Enum.TipoGenero;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -11,12 +12,12 @@ public class Series implements Serializable {
     private static final long serialVersionUID = 1L;
     private String codigo;
     private String titulo;
-    private Date fechaInicio;
+    private LocalDate fechaInicio;
     private String sinopsis;
     private TipoGenero tipoGenero;
     private ArrayList<Personajes> personajes;
 
-    public Series(String codigo, String titulo, Date fechaInicio, String sinopsis, TipoGenero tipoGenero, ArrayList<Personajes> personajes) {
+    public Series(String codigo, String titulo, LocalDate fechaInicio, String sinopsis, TipoGenero tipoGenero, ArrayList<Personajes> personajes) {
         this.codigo = codigo;
         this.titulo = titulo;
         this.fechaInicio = fechaInicio;
@@ -43,11 +44,11 @@ public class Series implements Serializable {
         this.titulo = titulo;
     }
 
-    public Date getFechaInicio() {
+    public LocalDate getFechaInicio() {
         return fechaInicio;
     }
 
-    public void setFechaInicio(Date fechaInicio) {
+    public void setFechaInicio(LocalDate fechaInicio) {
         this.fechaInicio = fechaInicio;
     }
 

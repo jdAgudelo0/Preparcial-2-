@@ -3,6 +3,7 @@ package programacion3.preparcial2.implementacionarchivos.Controller;
 import programacion3.preparcial2.implementacionarchivos.Exceptions.PersonajeException;
 import programacion3.preparcial2.implementacionarchivos.Model.Netflix;
 import programacion3.preparcial2.implementacionarchivos.Model.Personajes;
+import programacion3.preparcial2.implementacionarchivos.Model.Series;
 import programacion3.preparcial2.implementacionarchivos.Utils.Persistencia;
 
 import java.util.ArrayList;
@@ -78,6 +79,7 @@ public class ModelFactory {
     private void salvarDatos(){
         try{
             Persistencia.guardarPersonajes(getNetflix().obtenerPersonajes());
+            Persistencia.guardarSeries(getNetflix().obtenerSeries());
         }catch(Exception e){
             throw new RuntimeException(e);
         }
@@ -86,13 +88,45 @@ public class ModelFactory {
     public void cargarDatos(){
         try{
             getNetflix().obtenerPersonajes().addAll(Persistencia.cargarPersonajes());
+            getNetflix().obtenerSeries().addAll(Persistencia.cargarSeries());
         }catch(Exception e){
             throw new RuntimeException(e);
         }
     }
 
+    public int addSerie(Series serie) throws PersonajeException {
 
+        if (!getNetflix().serieExist(serie.getCodigo())){
+            getNetflix().addSerie(serie);
+            salvarDatos();
+            guardarLog("se esta agrgando un serie", 1,"registro");
+            return 1;
+        }else{
+            return 0;
+        }
+    }
 
+    public int deleteSerie(Series serie) throws PersonajeException {
+        if (getNetflix().serieExist(serie.getCodigo())){
+            getNetflix().removeSerie(serie);
+            salvarDatos();
+            guardarLog("se esta eliminando un serie", 3,"eliminar");
+            return 1;
+        }else{
+            return 0;
+        }
+    }
 
+    public boolean updateSerie(Series serie) throws PersonajeException {
+        getNetflix().updateSerie(serie, serie.getCodigo());
+        salvarDatos();
+        guardarLog("se esta actualizando un serie", 2,"actualizar");
+        return true;
+
+    }
+
+    public ArrayList<Series> obtenerSeries() throws PersonajeException {
+        return getNetflix().obtenerSeries();
+    }
 
 }
