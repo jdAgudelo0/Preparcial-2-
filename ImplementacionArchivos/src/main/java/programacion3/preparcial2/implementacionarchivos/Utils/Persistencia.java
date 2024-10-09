@@ -14,6 +14,8 @@ public class Persistencia {
     public static final String rutaArchivoLog = "src/main/resources/Log/Log.txt";
     public static final String rutaPersonajesTxt = "src/main/resources/DataBase/personajes.txt";
     public static final String rutaSeriesTxt = "src/main/resources/DataBase/Series.txt";
+    public static final  String rutaNetflixDat = "src/main/resources/DataBase/Netflix.dat";
+    public static final String rutaNetflixXml = "src/main/resources/DataBase/Netflix.xml";
 
 
 
@@ -128,5 +130,48 @@ public class Persistencia {
 
         return seriesLista;
     }
+
+    public static void guardarBinario(Netflix netflix) throws IOException {
+        try{
+            ArchivoUtil.salvarSerializable(rutaNetflixDat, netflix);
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public static Netflix cargarBinario() throws IOException {
+
+        Netflix netflix = null;
+        try{
+            netflix = (Netflix) ArchivoUtil.leerSerializable(rutaNetflixDat);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        return netflix;
+    }
+
+    public static void guardarArchivoXml(Netflix netflix) {
+
+            try{
+                ArchivoUtil.salvarArchivoXml(rutaNetflixXml, netflix);
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+
+    }
+
+    public static Netflix cargarArchivoXml() {
+        Netflix netflix = null;
+
+        try{
+            netflix = (Netflix) ArchivoUtil.cargarArchivoXml(rutaNetflixXml);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return netflix;
+    }
+
+
 
 }

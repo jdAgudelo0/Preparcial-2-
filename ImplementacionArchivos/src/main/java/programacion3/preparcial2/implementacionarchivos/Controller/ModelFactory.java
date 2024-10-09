@@ -6,9 +6,10 @@ import programacion3.preparcial2.implementacionarchivos.Model.Personajes;
 import programacion3.preparcial2.implementacionarchivos.Model.Series;
 import programacion3.preparcial2.implementacionarchivos.Utils.Persistencia;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
-import static programacion3.preparcial2.implementacionarchivos.Utils.Persistencia.guardarLog;
+import static programacion3.preparcial2.implementacionarchivos.Utils.Persistencia.*;
 
 public class ModelFactory {
 
@@ -34,10 +35,15 @@ public class ModelFactory {
         return netflix;
     }
 
-    private ModelFactory(){
+    private ModelFactory() throws IOException {
         netflix = new Netflix();
 
-        cargarDatos();
+       // cargarDatos();
+        //cargarBinario();
+        //guardarBinario();
+        cargarArchivoXml();
+        guardarArchivoXml();
+
 
         guardarLog("inicio de sesion", 1, "la app se incio");
     }
@@ -128,5 +134,23 @@ public class ModelFactory {
     public ArrayList<Series> obtenerSeries() throws PersonajeException {
         return getNetflix().obtenerSeries();
     }
+
+    private void guardarBinario() throws IOException {
+        Persistencia.guardarBinario(netflix);
+    }
+
+    private void cargarBinario() throws IOException {
+        netflix = Persistencia.cargarBinario();
+    }
+
+    public void guardarArchivoXml() throws IOException {
+        Persistencia.guardarArchivoXml(netflix);
+    }
+
+    public void cargarArchivoXml() throws IOException {
+        netflix= Persistencia.cargarArchivoXml();
+    }
+
+
 
 }

@@ -1,5 +1,7 @@
 package programacion3.preparcial2.implementacionarchivos.Utils;
 
+import java.beans.XMLDecoder;
+import java.beans.XMLEncoder;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -100,4 +102,59 @@ public class ArchivoUtil {
 
         return leerArchivos;
     }
+
+    public static void salvarSerializable(String rutaArchivo, Object objeto) throws IOException {
+        ObjectOutputStream oos = null;
+
+        try{
+            oos = new ObjectOutputStream(new FileOutputStream(rutaArchivo));
+            oos.writeObject(objeto);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally{
+            if(oos != null){
+                oos.close();
+            }
+        }
+    }
+
+    @SuppressWarnings("unchecked")
+    public static Object leerSerializable(String rutaArchivo) throws Exception {
+        ObjectInputStream ois = null;
+        Object objeto = null;
+
+        try{
+            ois = new ObjectInputStream(new FileInputStream(rutaArchivo));
+            objeto = ois.readObject();
+        }catch(Exception e){
+            throw e;
+        }finally {
+            if(ois != null){
+                ois.close();
+            }
+            return objeto;
+        }
+    }
+
+    public static Object cargarArchivoXml(String rutaArchivo) throws IOException {
+
+        XMLDecoder decodificadorXml;
+        Object objetoXml;
+
+        decodificadorXml = new XMLDecoder(new FileInputStream(rutaArchivo));
+        objetoXml = decodificadorXml.readObject();
+        decodificadorXml.close();
+        return objetoXml;
+    }
+
+    public static void salvarArchivoXml(String rutaArchivo, Object objeto) throws IOException {
+        XMLEncoder codificadorXml;
+
+        codificadorXml = new XMLEncoder(new FileOutputStream(rutaArchivo));
+        codificadorXml.writeObject(objeto);
+        codificadorXml.close();
+
+    }
 }
+
+

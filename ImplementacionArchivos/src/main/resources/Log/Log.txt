@@ -68,3 +68,29 @@ oct 08, 2024 8:33:14 P.M. programacion3.preparcial2.implementacionarchivos.Utils
 INFO: la app se incio inicio de sesion 08/09/2024/8
 oct 08, 2024 8:33:40 P.M. programacion3.preparcial2.implementacionarchivos.Utils.ArchivoUtil guardarRegistroLOG
 WARNING: actualizar se esta actualizando el personaje 08/09/2024/8
+oct 08, 2024 8:59:19 P.M. programacion3.preparcial2.implementacionarchivos.Utils.ArchivoUtil guardarRegistroLOG
+INFO: la app se incio inicio de sesion 08/09/2024/8
+oct 08, 2024 9:08:25 P.M. programacion3.preparcial2.implementacionarchivos.Utils.ArchivoUtil guardarRegistroLOG
+INFO: la app se incio inicio de sesion 08/09/2024/9
+oct 08, 2024 9:09:03 P.M. programacion3.preparcial2.implementacionarchivos.Utils.ArchivoUtil guardarRegistroLOG
+INFO: la app se incio inicio de sesion 08/09/2024/9
+oct 08, 2024 9:09:44 P.M. programacion3.preparcial2.implementacionarchivos.Utils.ArchivoUtil guardarRegistroLOG
+INFO: la app se incio inicio de sesion 08/09/2024/9
+oct 08, 2024 9:13:12 P.M. programacion3.preparcial2.implementacionarchivos.Utils.ArchivoUtil guardarRegistroLOG
+INFO: la app se incio inicio de sesion 08/09/2024/9
+oct 08, 2024 9:13:34 P.M. programacion3.preparcial2.implementacionarchivos.Utils.ArchivoUtil guardarRegistroLOG
+INFO: la app se incio inicio de sesion 08/09/2024/9
+oct 08, 2024 9:13:52 P.M. programacion3.preparcial2.implementacionarchivos.Utils.ArchivoUtil guardarRegistroLOG
+INFO: la app se incio inicio de sesion 08/09/2024/9
+oct 08, 2024 9:14:39 P.M. programacion3.preparcial2.implementacionarchivos.Utils.ArchivoUtil guardarRegistroLOG
+INFO: la app se incio inicio de sesion 08/09/2024/9
+oct 08, 2024 9:14:58 P.M. programacion3.preparcial2.implementacionarchivos.Utils.ArchivoUtil guardarRegistroLOG
+INFO: la app se incio inicio de sesion 08/09/2024/9
+oct 08, 2024 9:16:45 P.M. programacion3.preparcial2.implementacionarchivos.Utils.ArchivoUtil guardarRegistroLOG
+INFO: la app se incio inicio de sesion 08/09/2024/9
+oct 08, 2024 10:24:03 P.M. programacion3.preparcial2.implementacionarchivos.Utils.ArchivoUtil guardarRegistroLOG
+INFO: la app se incio inicio de sesion 08/09/2024/10
+oct 08, 2024 10:24:40 P.M. programacion3.preparcial2.implementacionarchivos.Utils.ArchivoUtil guardarRegistroLOG
+INFO: la app se incio inicio de sesion 08/09/2024/10
+oct 08, 2024 10:25:12 P.M. programacion3.preparcial2.implementacionarchivos.Utils.ArchivoUtil guardarRegistroLOG
+INFO: la app se incio inicio de sesion 08/09/2024/10

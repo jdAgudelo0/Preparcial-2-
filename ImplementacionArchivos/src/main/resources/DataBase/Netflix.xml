@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="22.0.2" class="java.beans.XMLDecoder">
+ <object class="programacion3.preparcial2.implementacionarchivos.Model.Netflix" id="Netflix0">
+  <void property="listaPersonajes">
+   <void method="add">
+    <object class="programacion3.preparcial2.implementacionarchivos.Model.Personajes">
+     <void property="edad">
+      <int>11</int>
+     </void>
+     <void property="id">
+      <string>345</string>
+     </void>
+     <void property="nombre">
+      <string>alex</string>
+     </void>
+     <void property="pais">
+      <string>Gringo</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="programacion3.preparcial2.implementacionarchivos.Model.Personajes">
+     <void property="edad">
+      <int>123</int>
+     </void>
+     <void property="id">
+      <string>987</string>
+     </void>
+     <void property="nombre">
+      <string>jui</string>
+     </void>
+     <void property="pais">
+      <string>Pereira</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="programacion3.preparcial2.implementacionarchivos.Model.Personajes">
+     <void property="edad">
+      <int>1</int>
+     </void>
+     <void property="id">
+      <string>20394</string>
+     </void>
+     <void property="nombre">
+      <string>pingui</string>
+     </void>
+     <void property="pais">
+      <string>Mongolia</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="programacion3.preparcial2.implementacionarchivos.Model.Personajes">
+     <void property="edad">
+      <int>18</int>
+     </void>
+     <void property="id">
+      <string>1092851747</string>
+     </void>
+     <void property="nombre">
+      <string>juan agudelo</string>
+     </void>
+     <void property="pais">
+      <string>Colombia</string>
+     </void>
+    </object>
+   </void>
+  </void>
+ </object>
+</java>
