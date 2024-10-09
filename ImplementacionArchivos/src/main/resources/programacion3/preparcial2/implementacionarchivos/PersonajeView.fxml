@@ -13,7 +13,7 @@
 
 <AnchorPane prefHeight="659.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="programacion3.preparcial2.implementacionarchivos.View.PersonajeViewController">
    <children>
-      <GridPane layoutX="141.0" layoutY="34.0" prefHeight="201.0" prefWidth="238.0">
+      <GridPane layoutX="141.0" layoutY="34.0" prefHeight="210.0" prefWidth="238.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.20001220703125" minWidth="10.0" prefWidth="45.60003662109375" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="158.39996337890625" minWidth="10.0" prefWidth="154.39996337890625" />
@@ -66,13 +66,14 @@
             <Button fx:id="btnActualizar" mnemonicParsing="false" onAction="#actualizarPersonaje" text="Actualizar" GridPane.columnIndex="2" />
          </children>
       </GridPane>
-      <TableView layoutX="133.0" layoutY="403.0" prefHeight="200.0" prefWidth="334.0">
+      <TableView fx:id="tvTablaPersonajes" layoutX="150.0" layoutY="385.0" prefHeight="202.0" prefWidth="300.0">
         <columns>
-          <TableColumn prefWidth="199.20001220703125" text="Tabla Personajes">
+          <TableColumn prefWidth="386.40001220703124" text="Tabla Personajes">
                <columns>
-                <TableColumn prefWidth="75.0" text="Id" />
-                  <TableColumn prefWidth="75.0" text="Column X" />
-                  <TableColumn prefWidth="75.0" text="Column X" />
+                <TableColumn fx:id="tcId" prefWidth="75.0" text="Id" />
+                  <TableColumn fx:id="tcNombre" prefWidth="75.0" text="Nombre" />
+                  <TableColumn fx:id="tcEdad" prefWidth="75.0" text="Edad" />
+                  <TableColumn fx:id="tcPais" prefWidth="75.0" text="Pais" />
                </columns>
             </TableColumn>
         </columns>
