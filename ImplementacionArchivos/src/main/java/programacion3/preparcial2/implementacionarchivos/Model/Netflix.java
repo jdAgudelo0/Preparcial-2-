@@ -1,6 +1,7 @@
 package programacion3.preparcial2.implementacionarchivos.Model;
 
 import programacion3.preparcial2.implementacionarchivos.Exceptions.PersonajeException;
+import programacion3.preparcial2.implementacionarchivos.Exceptions.SeriesException;
 
 
 import java.io.Serializable;
@@ -61,25 +62,25 @@ public class Netflix implements Serializable {
         }
     }
 
-    public void addSerie(Series serie) throws PersonajeException {
+    public void addSerie(Series serie) throws SeriesException {
         if(serie == null){
-            throw new PersonajeException("El serie no puede ser nulo");
+            throw new SeriesException("El serie no puede ser nulo");
         }else{
             listaSeries.add(serie);
         }
     }
 
-    public void removeSerie(Series serie) throws PersonajeException {
+    public void removeSerie(Series serie) throws SeriesException {
         if(serie == null){
-            throw new PersonajeException("El serie no puede ser nulo");
+            throw new SeriesException("El serie no puede ser nulo");
         }else{
             listaSeries.remove(serie);
         }
     }
 
-    public void updateSerie(Series serieActualizado, String codigo) throws PersonajeException {
+    public void updateSerie(Series serieActualizado, String codigo) throws SeriesException {
         if(serieActualizado == null){
-            throw new PersonajeException("El serie no puede ser nulo");
+            throw new SeriesException("El serie no puede ser nulo");
         }else{
             for(Series serie : listaSeries){
                 if(serie.getCodigo().equals(codigo)){

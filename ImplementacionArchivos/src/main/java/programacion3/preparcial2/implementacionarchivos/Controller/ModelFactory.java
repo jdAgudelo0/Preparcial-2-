@@ -1,6 +1,7 @@
 package programacion3.preparcial2.implementacionarchivos.Controller;
 
 import programacion3.preparcial2.implementacionarchivos.Exceptions.PersonajeException;
+import programacion3.preparcial2.implementacionarchivos.Exceptions.SeriesException;
 import programacion3.preparcial2.implementacionarchivos.Model.Netflix;
 import programacion3.preparcial2.implementacionarchivos.Model.Personajes;
 import programacion3.preparcial2.implementacionarchivos.Model.Series;
@@ -38,9 +39,9 @@ public class ModelFactory {
     private ModelFactory() throws IOException {
         netflix = new Netflix();
 
-       // cargarDatos();
-        //cargarBinario();
-        //guardarBinario();
+        cargarDatos();
+        cargarBinario();
+        guardarBinario();
         cargarArchivoXml();
         guardarArchivoXml();
 
@@ -100,7 +101,7 @@ public class ModelFactory {
         }
     }
 
-    public int addSerie(Series serie) throws PersonajeException {
+    public int addSerie(Series serie) throws SeriesException {
 
         if (!getNetflix().serieExist(serie.getCodigo())){
             getNetflix().addSerie(serie);
@@ -112,7 +113,7 @@ public class ModelFactory {
         }
     }
 
-    public int deleteSerie(Series serie) throws PersonajeException {
+    public int deleteSerie(Series serie) throws SeriesException {
         if (getNetflix().serieExist(serie.getCodigo())){
             getNetflix().removeSerie(serie);
             salvarDatos();
@@ -123,15 +124,15 @@ public class ModelFactory {
         }
     }
 
-    public boolean updateSerie(Series serie) throws PersonajeException {
-        getNetflix().updateSerie(serie, serie.getCodigo());
+    public boolean updateSerie(Series serie, String codigoPelicula) throws SeriesException {
+        getNetflix().updateSerie(serie, codigoPelicula);
         salvarDatos();
         guardarLog("se esta actualizando un serie", 2,"actualizar");
         return true;
 
     }
 
-    public ArrayList<Series> obtenerSeries() throws PersonajeException {
+    public ArrayList<Series> obtenerSeries() throws SeriesException {
         return getNetflix().obtenerSeries();
     }
 
