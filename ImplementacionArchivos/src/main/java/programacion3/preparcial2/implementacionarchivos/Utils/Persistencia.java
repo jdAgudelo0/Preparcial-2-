@@ -83,7 +83,7 @@ public class Persistencia {
         StringBuilder contenido = new StringBuilder();
         for (Series series : seriesLista) {
             contenido.append (series.getCodigo()).append(" %% ")
-                    .append(series.toString()).append(" %% ")
+                    .append(series.getTitulo()).append(" %% ")
                     .append(series.getSinopsis()).append(" %% ")
                     .append(series.getFechaInicio()).append(" %% ")
                     .append(series.getTipoGenero()).append(" %% ");
