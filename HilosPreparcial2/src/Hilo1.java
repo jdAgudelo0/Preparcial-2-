@@ -18,7 +18,9 @@ public class Hilo1 extends Thread {
     @Override
     public void run() {
         int resultado = sumarNumerosRecursivo(n);
-        System.out.println("la suma es =" + resultado);
+       // System.out.println("la suma es =" + resultado);
+
+
     }
 
 }

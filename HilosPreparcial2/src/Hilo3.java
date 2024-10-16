@@ -20,6 +20,7 @@ public class Hilo3 extends Thread {
     @Override
     public void run() {
         int resultado = contarConsonantes(palabra);
-        System.out.println("la cantidad de consonates encontrada es de =" + resultado);
+        //System.out.println("la cantidad de consonates encontrada es de =" + resultado);
+
     }
 }

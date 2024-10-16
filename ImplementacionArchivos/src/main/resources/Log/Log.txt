@@ -104,3 +104,9 @@ oct 09, 2024 2:20:02 P.M. programacion3.preparcial2.implementacionarchivos.Utils
 INFO: la app se incio inicio de sesion 09/09/2024/2
 oct 09, 2024 9:19:45 P.M. programacion3.preparcial2.implementacionarchivos.Utils.ArchivoUtil guardarRegistroLOG
 INFO: la app se incio inicio de sesion 09/09/2024/9
+oct 11, 2024 8:00:52 P.M. programacion3.preparcial2.implementacionarchivos.Utils.ArchivoUtil guardarRegistroLOG
+INFO: la app se incio inicio de sesion 11/09/2024/8
+oct 15, 2024 8:47:28 P.M. programacion3.preparcial2.implementacionarchivos.Utils.ArchivoUtil guardarRegistroLOG
+INFO: la app se incio inicio de sesion 15/09/2024/8
+oct 15, 2024 8:50:00 P.M. programacion3.preparcial2.implementacionarchivos.Utils.ArchivoUtil guardarRegistroLOG
+INFO: la app se incio inicio de sesion 15/09/2024/8

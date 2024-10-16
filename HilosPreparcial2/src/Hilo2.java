@@ -18,6 +18,7 @@ public class Hilo2 extends Thread {
     @Override
     public void run() {
         int resultado = factorialNumerosRecursivo(n);
-        System.out.println("el factorial es =" + resultado);
+        //System.out.println("el factorial es =" + resultado);
+
     }
 }

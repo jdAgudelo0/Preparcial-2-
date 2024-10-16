@@ -31,6 +31,10 @@ public class Main {
             e.printStackTrace();
         }
 
+        Metodos metodos = new Metodos();
 
+        int resultado = metodos.multiplicacion(hilo1.sumarNumerosRecursivo(10), hilo2.factorialNumerosRecursivo(6));
+
+        metodos.imprimir(resultado, hilo3.contarConsonantes("Electroencefalografista"));
     }
 }
